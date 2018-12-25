@@ -1,0 +1,8 @@
+The solved problem is described here:
+http://3dtoday.ru/questions/e3d-chimera-extruder-melts-the-model-with-the-change-of-nozzle/
+
+script extruder change, add the departure to 0.0, for example with a rise of 5 mm
+she has every extruder before / after scripts
+I put it there (on extruder end g-code):
+
+G0 X30 Y30 F6000

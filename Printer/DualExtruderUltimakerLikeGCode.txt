@@ -1,0 +1,40 @@
+	START G-CODE
+;Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}
+M107       ;start with the fan off
+M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+M109 T1 S{print_temperature} ;Uncomment to add your own temperature line
+M109 T0 S{print_temperature} ;Uncomment to add your own temperature line
+G21        ;metric values
+G91
+G1 E20 F600
+G90        ;absolute positioning
+M82        ;set extruder to absolute mode
+M300 S5000 P280
+G4 S1
+M300 S5000 P280
+G4 S1
+M300 S5000 P280
+G28 X0 Y0  ;move X/Y to min endstops
+G28 Z0     ;move Z to min endstops
+M420 S1
+G1 Z15.0 F{travel_speed} ;move the platform down 15mm
+G92 E0                  ;zero the extruded length
+G1 F{travel_speed}
+M117 Building ...
+
+	END G-CODE
+M104 S0                     ;extruder heater off
+M140 S0                     ;heated bed heater off (if you have it)
+M107
+G91
+G1 E-20 F600                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure                                   ;relative positioning
+G1 Z10 F1000
+M300 S5000 P280
+G4 S1
+G28 Y0 X0
+G90
+G1 Z190 F3000
+M300 S5000 P280
+G4 S1
+M300 S5000 P280
+M84
