@@ -5,46 +5,41 @@
       <brand>MonoFilament</brand>
       <material>ABS</material>
       <color>Generic</color>
-      <label>ABS MF min</label>
+      <label>ABS+ MF min</label>
     </name>
-    <compatible>True</compatible>
-    <GUID>7b080e45-26c2-4560-acf8-5f0c87005890</GUID>
-    <color_code>#9d30d3</color_code>
-    <definition>fdmprinter</definition>
     <adhesion_info>Print on bare glass. Use tape for cold build plates.</adhesion_info>
+    <color_code>#30d38a</color_code>
     <version>2</version>
     <description>MonoFilament ABS+</description>
+    <GUID>ca30e663-b87c-49cf-b8dd-5677736bbfb4</GUID>
   </metadata>
   <properties>
     <diameter>1.75</diameter>
     <density>1.24</density>
   </properties>
   <settings>
+    <setting key="print temperature">215.0</setting>
     <setting key="retraction amount">0.0</setting>
-    <setting key="standby temperature">220.0</setting>
-    <setting key="adhesion tendency">0</setting>
-    <setting key="heated bed temperature">105.0</setting>
-    <setting key="print temperature">230.0</setting>
     <setting key="surface energy">100</setting>
+    <setting key="heated bed temperature">105.0</setting>
+    <setting key="adhesion tendency">0</setting>
+    <setting key="standby temperature">205.0</setting>
     <machine>
       <machine_identifier manufacturer="IMADE3D" product="IMADE3D JellyBOX" />
+      <setting key="print temperature">210</setting>
       <setting key="standby temperature">175</setting>
       <setting key="heated bed temperature">55</setting>
-      <setting key="print temperature">210</setting>
       <hotend id="0.4 mm">
-        <setting key="hardware compatible">yes</setting>
-      </hotend>
-      <hotend id="0.4 mm 2-fans">
         <setting key="hardware compatible">yes</setting>
       </hotend>
     </machine>
     <machine>
       <machine_identifier manufacturer="Cartesio bv" product="cartesio" />
-      <setting key="standby temperature">160</setting>
       <setting key="print cooling">40.0</setting>
       <setting key="print temperature">185</setting>
       <setting key="heated bed temperature">50</setting>
       <setting key="retraction speed">40</setting>
+      <setting key="standby temperature">160</setting>
     </machine>
   </settings>
 </fdmmaterial>
